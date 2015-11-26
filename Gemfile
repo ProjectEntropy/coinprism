@@ -21,7 +21,7 @@ end
 
 group :test do
   gem 'coveralls', :require => false
-  gem 'json', '~> 1.7', :platforms => [:jruby]
+  gem 'json', :platforms => [:jruby]
   gem 'multi_json', '~> 1.11.0'
   gem 'mime-types', '< 2.0.0'
   gem 'netrc', '~> 0.7.7'

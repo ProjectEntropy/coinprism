@@ -182,7 +182,7 @@ DEPENDENCIES
   hirb-unicode
   jeweler
   jruby-openssl
-  json (~> 1.7)
+  json
   mime-types (< 2.0.0)
   multi_json (~> 1.11.0)
   netrc (~> 0.7.7)
