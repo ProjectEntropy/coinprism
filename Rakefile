@@ -3,7 +3,11 @@
 require 'rubygems'
 require 'bundler'
 begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+
   Bundler.setup(:default, :development)
+  task :default => :spec
 rescue Bundler::BundlerError => e
   $stderr.puts e.message
   $stderr.puts "Run `bundle install` to install missing gems"
@@ -15,10 +19,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "coinprism"
-  gem.homepage = "http://github.com/dangerousbeans/coinprism"
+  gem.homepage = "http://github.com/ProjectEntropy/coinprism"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Ruby API Wrapper for CoinPrism Bitcoin Asset API"
+  gem.description = "Ruby API Wrapper for CoinPrism Bitcoin Asset API"
   gem.email = "joran.k@gmail.com"
   gem.authors = ["Joran Kikke"]
   # dependencies defined in Gemfile
