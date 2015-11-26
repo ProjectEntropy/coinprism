@@ -15,6 +15,7 @@ group :development do
   gem 'wirb'
   gem 'wirble'
   gem 'yard'
+  gem 'jeweler'
 end
 
 
