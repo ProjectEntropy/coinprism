@@ -9,6 +9,12 @@ gem 'rake'
 group :development do
   gem 'awesome_print', :require => 'ap'
   gem 'guard-rspec', '~> 4.5'
+  gem 'guard-bundler'
+
+  gem 'rb-fchange', :require=>false
+  gem 'rb-fsevent', :require=>false
+  gem 'rb-inotify', :require=>false
+
   gem 'hirb-unicode'
   gem 'pry'
   gem 'redcarpet'
@@ -25,7 +31,6 @@ group :test do
   gem 'multi_json', '~> 1.11.0'
   gem 'mime-types', '< 2.0.0'
   gem 'netrc', '~> 0.7.7'
-  gem 'rb-fsevent', '~> 0.9'
   gem 'rspec', '~> 3.0.0'
   gem 'shoulda'
   gem 'simplecov', :require => false

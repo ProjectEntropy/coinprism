@@ -25,7 +25,25 @@ rescue Bundler::BundlerError => e
 end
 require 'rspec'
 require 'shoulda'
+require 'webmock'
+
+WebMock.disable_net_connect!
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'coinprism'
+
+
+require 'vcr'
+VCR.configure do |c|
+  c.configure_rspec_metadata!
+
+  c.default_cassette_options = {
+    :serialize_with             => :json,
+    :preserve_exact_body_bytes  => true,
+    :decode_compressed_response => true,
+    :record                     => ENV['TRAVIS'] ? :none : :once
+  }
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock
+end

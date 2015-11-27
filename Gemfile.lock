@@ -54,6 +54,10 @@ GEM
       pry (>= 0.9.12)
       shellany (~> 0.0)
       thor (>= 0.18.1)
+    guard-bundler (2.1.0)
+      bundler (~> 1.0)
+      guard (~> 2.2)
+      guard-compat (~> 1.1)
     guard-compat (1.2.1)
     guard-rspec (4.6.4)
       guard (~> 2.1)
@@ -111,6 +115,8 @@ GEM
       slop (~> 3.4)
     rack (1.6.4)
     rake (10.4.2)
+    rb-fchange (0.0.6)
+      ffi
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -178,6 +184,7 @@ DEPENDENCIES
   bundler (~> 1.0)
   coinprism!
   coveralls
+  guard-bundler
   guard-rspec (~> 4.5)
   hirb-unicode
   jeweler
@@ -188,7 +195,9 @@ DEPENDENCIES
   netrc (~> 0.7.7)
   pry
   rake
-  rb-fsevent (~> 0.9)
+  rb-fchange
+  rb-fsevent
+  rb-inotify
   redcarpet
   rest-client
   rspec (~> 3.0.0)
