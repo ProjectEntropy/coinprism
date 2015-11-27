@@ -20,8 +20,6 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
-    ".ruby-gemset",
-    ".ruby-version",
     "Gemfile",
     "Gemfile.lock",
     "Guardfile",
