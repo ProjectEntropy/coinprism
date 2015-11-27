@@ -25,7 +25,11 @@ Jeweler::Tasks.new do |gem|
   gem.description = "Ruby toolkit for working with the CoinPrism API"
   gem.email = "joran.k@gmail.com"
   gem.authors = ["Joran Kikke"]
-  # dependencies defined in Gemfile
+
+  # Dont bundle specs in gem
+  gem.files.exclude 'spec'
+  gem.files.exclude '.ruby-version'
+  gem.files.exclude '.ruby-gemset'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
