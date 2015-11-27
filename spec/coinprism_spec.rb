@@ -141,6 +141,16 @@ describe CoinPrism do
   end
 
   describe "assets" do
+    describe "#asset_definition" do
+      it 'returns expected fields' do
+        VCR.use_cassette("asset_definition") do
+          resp = Coinprism.asset_definition(ASSET_ID)
+          expect(resp.asset_id).to eq(ASSET_ID)
+          expect(resp.name_short).to eq "GHX"
+        end
+      end
+    end
+
     describe "#asset_owners" do
       it 'returns expected fields' do
         VCR.use_cassette("asset") do

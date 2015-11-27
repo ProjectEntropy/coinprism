@@ -23,9 +23,14 @@ module Coinprism
   end
 
   # Asset
+  def self.asset_definition(asset_id)
+    client_get("#{COINPRIM}#{ASSET_URL}/#{asset_id}")
+  end
+  
   def self.asset_owners(asset_id)
     client_get("#{COINPRIM}#{ASSET_URL}/#{asset_id}/owners")
   end
+
 
 
   private
