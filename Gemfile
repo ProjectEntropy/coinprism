@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
 
-gem 'rest-client', '~> 1.8.0'
-gem 'rake', '~> 10.4.2'
+gem 'rest-client', '~> 1'
+gem 'rake', '~> 10'
 
 group :development do
   gem 'awesome_print', :require => 'ap'

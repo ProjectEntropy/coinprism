@@ -189,12 +189,12 @@ DEPENDENCIES
   multi_json (~> 1.11.0)
   netrc (~> 0.7.7)
   pry
-  rake (~> 10.4.2)
+  rake (~> 10)
   rb-fchange
   rb-fsevent
   rb-inotify
   redcarpet
-  rest-client (~> 1.8.0)
+  rest-client (~> 1)
   rspec (~> 3.0.0)
   shoulda
   simplecov
