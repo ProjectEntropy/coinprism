@@ -24,6 +24,12 @@ Install via Rubygems
 Coinprism.address_info("akW5d2jL859ELCxvRwtqiiZV8Hg5Bx7Pu19")
   => #<OpenStruct address="1NifqmDXjuoJzi6eGzL9cctDBo8WxNPCgo", asset_address="akYgZ5w2sDPgzrxG1KcSLGUnnXQJgwr8CTE", bitcoin_address="1NifqmDXjuoJzi6eGzL9cctDBo8WxNPCgo", issuable_asset="AGY84vUEXzgnY2QSa4k7UBEq5j54DcEuqo", balance=8824131, unconfirmed_balance=0, assets=[{"id"=>"AbukVhn9rLxcYQmwd4FGWtjRDtWfodcQ3j", "balance"=>"26100", ... } ], ...>
 
+info = Coinprism.address_info("akW5d2jL859ELCxvRwtqiiZV8Hg5Bx7Pu19")
+info.balance
+  => 8824131 # (Satoshis)
+
+
+
 Coinprism.transactions("akW5d2jL859ELCxvRwtqiiZV8Hg5Bx7Pu19")
   =>  [ {"hash"=>"dc04cbd2b74d22e23b594c2c40d9106e7d8e67c6ebfef4d64408ec11a0e0f2fe", "block_hash"=>"00000000000000000ef246c814f8cb8c1a26bc3c6cb1286bdbc5f4140ed3fc79", "block_height"=>385510, "block_time"=>"2015-11-26T22:14:11.0000000Z", ... } ]
 
