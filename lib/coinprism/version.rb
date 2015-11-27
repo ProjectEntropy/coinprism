@@ -1,4 +1,4 @@
-module CoinPrism
+module Coinprism
   # Current major release.
   # @return [Integer]
   MAJOR = 1

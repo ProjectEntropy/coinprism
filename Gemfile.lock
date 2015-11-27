@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     coinprism (1.0.0)
-      sawyer (~> 0.6.0, >= 0.5.3)
 
 GEM
   remote: https://rubygems.org/
@@ -139,9 +138,6 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
     safe_yaml (1.0.4)
-    sawyer (0.6.0)
-      addressable (~> 2.3.5)
-      faraday (~> 0.8, < 0.10)
     shellany (0.0.1)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
@@ -188,18 +184,17 @@ DEPENDENCIES
   guard-rspec (~> 4.5)
   hirb-unicode
   jeweler
-  jruby-openssl
   json
   mime-types (< 2.0.0)
   multi_json (~> 1.11.0)
   netrc (~> 0.7.7)
   pry
-  rake
+  rake (~> 10.4.2)
   rb-fchange
   rb-fsevent
   rb-inotify
   redcarpet
-  rest-client
+  rest-client (~> 1.8.0)
   rspec (~> 3.0.0)
   shoulda
   simplecov

@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
 
-gem 'rest-client'
-
-gem 'jruby-openssl', :platforms => :jruby
-gem 'rake'
+gem 'rest-client', '~> 1.8.0'
+gem 'rake', '~> 10.4.2'
 
 group :development do
   gem 'awesome_print', :require => 'ap'

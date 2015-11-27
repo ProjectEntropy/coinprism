@@ -1,11 +1,11 @@
 require 'helper'
 
-describe CoinPrism do
+describe Coinprism do
   ADDRESS = "akW5d2jL859ELCxvRwtqiiZV8Hg5Bx7Pu19"
   ASSET_ID = "AdjonhsTtUxo26WhFk1LxayXNUZa7jkszX"
   TX = "381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da"
   it "has a version" do
-    expect(CoinPrism::VERSION).to eq("1.0.0")
+    expect(Coinprism::VERSION).to eq("1.0.0")
   end
 
   describe "addresses" do

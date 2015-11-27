@@ -1,5 +1,7 @@
 require 'rest-client'
+require 'json'
 
+require 'coinprism/version'
 require 'coinprism/client'
 
 module Coinprism

@@ -22,7 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/ProjectEntropy/coinprism"
   gem.license = "MIT"
   gem.summary = "Ruby API Wrapper for CoinPrism Bitcoin Asset API"
-  gem.description = "Ruby API Wrapper for CoinPrism Bitcoin Asset API"
+  gem.description = "Ruby toolkit for working with the CoinPrism API"
   gem.email = "joran.k@gmail.com"
   gem.authors = ["Joran Kikke"]
   # dependencies defined in Gemfile
