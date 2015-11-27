@@ -5,7 +5,7 @@ describe Coinprism do
   ASSET_ID = "AdjonhsTtUxo26WhFk1LxayXNUZa7jkszX"
   TX = "381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da"
   it "has a version" do
-    expect(Coinprism::VERSION).to eq("1.0.0")
+    expect(Coinprism::VERSION).to eq("1.0.1")
   end
 
   describe "addresses" do
