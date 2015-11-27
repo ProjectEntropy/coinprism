@@ -20,5 +20,14 @@ describe CoinPrism do
           })
       end
     end
+
+    it 'brings back an ostruct' do
+      VCR.use_cassette("address") do
+        response = Coinprism.address_info("akW5d2jL859ELCxvRwtqiiZV8Hg5Bx7Pu19")
+
+        expect(response.class).to eq(OpenStruct)
+        expect(response.balance).to eq(5010000)
+      end
+    end
   end
 end
