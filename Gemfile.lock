@@ -2,6 +2,9 @@ PATH
   remote: .
   specs:
     coinprism (1.0.0)
+      coinprism
+      rake (~> 10)
+      rest-client (~> 1)
 
 GEM
   remote: https://rubygems.org/
