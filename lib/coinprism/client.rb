@@ -6,29 +6,29 @@ module Coinprism
 
   # Address
   def self.address_info(address)
-    client_get("#{COINPRIM}#{ADDRESS_URL}/#{address}")
+    client_get("#{COINPRIM}#{ADDRESS_URL}#{address}")
   end
 
   def self.transactions(address)
-    client_get("#{COINPRIM}#{ADDRESS_URL}/#{address}/transactions")
+    client_get("#{COINPRIM}#{ADDRESS_URL}#{address}/transactions")
   end
 
   def self.unspents(address)
-    client_get("#{COINPRIM}#{ADDRESS_URL}/#{address}/unspents")
+    client_get("#{COINPRIM}#{ADDRESS_URL}#{address}/unspents")
   end
 
   # Transaction
   def self.transaction_info(tx)
-    client_get("#{COINPRIM}#{TX_URL}/#{tx}")
+    client_get("#{COINPRIM}#{TX_URL}#{tx}")
   end
 
   # Asset
   def self.asset_definition(asset_id)
-    client_get("#{COINPRIM}#{ASSET_URL}/#{asset_id}")
+    client_get("#{COINPRIM}#{ASSET_URL}#{asset_id}")
   end
-  
+
   def self.asset_owners(asset_id)
-    client_get("#{COINPRIM}#{ASSET_URL}/#{asset_id}/owners")
+    client_get("#{COINPRIM}#{ASSET_URL}#{asset_id}/owners")
   end
 
 

@@ -97,7 +97,7 @@ describe Coinprism do
                   }],
                   "amount"=>990000,
                   "fees"=>10000,
-                  "confirmations"=>1321
+                  "confirmations"=>15196
                 }
           )
         end
@@ -118,7 +118,7 @@ describe Coinprism do
               "addresses"=>["1L7jnZWnbfLeLim4uGjY4haYx4u1wgvX6e"],
               "script_hex"=>"76a914d1b099e9af7b167141bd7da63b595819d3b62c3088ac",
               "spent"=>false,
-              "confirmations"=>1329}
+              "confirmations"=>15204}
           )
         end
       end
@@ -133,7 +133,7 @@ describe Coinprism do
           expect(resp.to_h).to eq(
                 {
                   :hash=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da",
-                  :block_hash=>"000000000000000002c9e3352034631ad5815990393472b222b8a8916c3a5dab", :block_height=>378360, :block_time=>"2015-10-11T02:13:05.0000000Z", :inputs=>[{"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "output_hash"=>"c6a8b7a922a146c63a0c206a19004bddc3cb290989b1086df3574702f4204bde", "output_index"=>0, "value"=>5000000, "addresses"=>["16hUPYinZcWZtRLfiw87FBss3AAjkgXJCh"], "script_signature"=>"493046022100dfb247facedc42d4af54cd827f06ae172c533cd2e07ce5c452fc3b41a9024c680221009a266750bbac6b0cecc237d2b9231ddc048e04de4c3a758338290f1a2e0ed12101210305a3dd952ea1361009857be1a7ec4416026cbc5bab755385ccca313a8cd37043", "asset_id"=>nil, "asset_quantity"=>nil}], :outputs=>[{"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "index"=>0, "value"=>600, "addresses"=>["12ULoRSnhDycdJnoZ6kuvYDjirdgteNbWx"], "script"=>"76a9141023e2a0f6275131ee05819b58261752ebfb989a88ac", "asset_id"=>"ALXukPZvZJL3qDZkga2DwcbwS1P3pmyB8f", "asset_quantity"=>"5"}, {"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "index"=>1, "value"=>0, "addresses"=>[], "script"=>"6a074f410100010500", "asset_id"=>nil, "asset_quantity"=>nil}, {"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "index"=>2, "value"=>4989400, "addresses"=>["1DdFnKtfxomnpiw7bLsmGUh2wsz79pmCTc"], "script"=>"76a9148a7cd2af34908f474372c27dd386b2eac6c6478988ac", "asset_id"=>nil, "asset_quantity"=>nil}], :amount=>4990000, :fees=>10000, :confirmations=>7170}
+                  :block_hash=>"000000000000000002c9e3352034631ad5815990393472b222b8a8916c3a5dab", :block_height=>378360, :block_time=>"2015-10-11T02:13:05.0000000Z", :inputs=>[{"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "output_hash"=>"c6a8b7a922a146c63a0c206a19004bddc3cb290989b1086df3574702f4204bde", "output_index"=>0, "value"=>5000000, "addresses"=>["16hUPYinZcWZtRLfiw87FBss3AAjkgXJCh"], "script_signature"=>"493046022100dfb247facedc42d4af54cd827f06ae172c533cd2e07ce5c452fc3b41a9024c680221009a266750bbac6b0cecc237d2b9231ddc048e04de4c3a758338290f1a2e0ed12101210305a3dd952ea1361009857be1a7ec4416026cbc5bab755385ccca313a8cd37043", "asset_id"=>nil, "asset_quantity"=>nil}], :outputs=>[{"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "index"=>0, "value"=>600, "addresses"=>["12ULoRSnhDycdJnoZ6kuvYDjirdgteNbWx"], "script"=>"76a9141023e2a0f6275131ee05819b58261752ebfb989a88ac", "asset_id"=>"ALXukPZvZJL3qDZkga2DwcbwS1P3pmyB8f", "asset_quantity"=>"5"}, {"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "index"=>1, "value"=>0, "addresses"=>[], "script"=>"6a074f410100010500", "asset_id"=>nil, "asset_quantity"=>nil}, {"transaction_hash"=>"381cfbe83caaf96bf54132c89ff1408f36012442cee807496c3626e5ad6b14da", "index"=>2, "value"=>4989400, "addresses"=>["1DdFnKtfxomnpiw7bLsmGUh2wsz79pmCTc"], "script"=>"76a9148a7cd2af34908f474372c27dd386b2eac6c6478988ac", "asset_id"=>nil, "asset_quantity"=>nil}], :amount=>4990000, :fees=>10000, :confirmations=>21044}
               )
         end
       end
@@ -155,15 +155,14 @@ describe Coinprism do
       it 'returns expected fields' do
         VCR.use_cassette("asset") do
           resp = Coinprism.asset_owners(ASSET_ID)
-          expect(resp.block_height).to eq(385527)
+          expect(resp.block_height).to eq(399403)
           expect(resp.asset_id).to eq(ASSET_ID)
-          expect(resp.owners.length).to eq(213)
+          expect(resp.owners.length).to eq(220)
           expect(resp.owners.first).to eq(
                 {
-                  "script"=>"76a914ee3c1e561b43b4522e1dacdeadf822dbf964d8ce88ac",
-                  "address"=>"1NifqmDXjuoJzi6eGzL9cctDBo8WxNPCgo",
-                  "asset_quantity"=>"26100"}
-              )
+                  "script"=>"76a91431809df0a23e8b244fe10303a74f4e03ac74b84888ac", "address"=>"15WkBs1d4anxwAzfYdFjUbSj4z8jSWN4NY", "asset_quantity"=>"53540"
+                }
+          )
         end
       end
     end
